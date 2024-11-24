@@ -1,7 +1,10 @@
-const removeFromArray = function(arr, rem) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === rem) {
-      arr.splice(i, 1);
+const removeFromArray = function(arr, ...rem) {
+  for (const take of rem) {
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] === take) {
+        arr.splice(i, 1);
+        i--;
+      }
     }
   }
   return arr;
