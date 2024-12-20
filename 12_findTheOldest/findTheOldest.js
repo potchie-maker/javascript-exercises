@@ -1,7 +1,7 @@
 const findTheOldest = function(people) {
  return people
     .map((person) => ({
-      ...persn,
+      ...person,
       yearOfDeath: person.yearOfDeath || new Date().getFullYear(),
     }))
     .sort((personA, personB) => (personB.yearOfDeath - personB.yearOfBirth) - (personA.yearOfDeath - personA.yearOfBirth))
